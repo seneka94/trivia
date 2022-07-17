@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function a() {
+                document.getElementById("1").style.backgroundColor = 'red';
+                document.getElementById("answer").innerHTML = "Incorrect!";
+                }
+            function b() {
+                document.getElementById("2").style.backgroundColor = 'red';
+                document.getElementById("answer").innerHTML = "Incorrect!";
+                }
+            function c() {
+                document.getElementById("3").style.backgroundColor = 'green';
+                document.getElementById("answer").innerHTML = "Correct!";
+                }
+            function d() {
+                document.getElementById("4").style.backgroundColor = 'red';
+                document.getElementById("answer").innerHTML = "Incorrect!";
+                }
+            function f() {
+                document.getElementById("5").style.backgroundColor = 'red';
+                document.getElementById("answer").innerHTML = "Incorrect!";
+                }
+
+            function g() {
+            	var check = document.getElementById("6").value == "Ternopil";
+                	if(check){
+                    	document.getElementById("6").style.backgroundColor = 'green';
+                        document.getElementById("answer1").innerHTML = "Correct!";
+                    }
+                    else{
+                		document.getElementById("6").style.backgroundColor = 'red';
+                        document.getElementById("answer1").innerHTML = "Incorrect!";
+                	}
+                }
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                    <h3>Who is author ideology of a Ukrainian Monarchism?</h3>
+
+                    <button id="1" type="button" onclick="a()">Mykhailo Hrushevsky</button>
+                    <button id="2" type="button" onclick="b()">Nestor Makhno</button>
+                    <button id="3" type="button" onclick="c()">Viacheslav Lypyns'kyi</button>
+                    <button id="4" type="button" onclick="d()">Yevhen Petrushevych</button>
+                    <button id="5" type="button" onclick="f()">Mykola Mikhnovsky</button>
+
+                    <p id = "answer"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Which city in Ukraine is called "Faine misto"?</h3>
+                <input id="6" type ="text" autocomplete="off">
+                <button type="submit" onclick="g()">Check Answer</button>
+                <p id="answer1"></p>
+            </div>
+        </div>
+    </body>
+</html>
